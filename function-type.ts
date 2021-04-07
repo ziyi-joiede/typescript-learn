@@ -12,7 +12,7 @@ function add(first: number, second: number){
 	return first + second + '';
 }
 
-const total2 = add(1, 2);
+let total2 = add(1, 2);
 
 
 // 函数的返回值类型为 void 类型
@@ -21,3 +21,25 @@ function sayHello (): void{
 	// return ''; 
 }
 
+// 函数永远不会执行到最后
+function errorEmitter(): never{
+	throw new Error();
+	// 或者 while(true){}
+	console.log(123);
+}
+
+// 函数解构的类型注解
+function add1(
+	{first, second}: {first: number, second: number}
+): number{
+	return first + second;
+}
+
+let total3 = add1({first: 1, second: 2})
+
+
+function getNumber({ first }: { first: number }){
+	return first;
+}
+
+let total4 = getNumber({first: 1})
