@@ -59,12 +59,12 @@ namespace Home{
 	// 	}
 	// }
   // export 向外暴露出去
-	export class Page{
-		user:Components.User = {name: 'lyw'}  
-		constructor(){
-			new Components.Header();
-			new Components.Content();
-			new Components.Footer();
-		}
-	}
+	// export class Page{
+	// 	user:Components.User = {name: 'lyw'}  
+	// 	constructor(){
+	// 		new Components.Header();
+	// 		new Components.Content();
+	// 		new Components.Footer();
+	// 	}
+	// }
 }
