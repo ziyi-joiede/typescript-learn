@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node ./src/3.enum-type.ts"
+    "dev": "ts-node ./src/3.enum-type.ts",
+    "start": "parcel ./src/index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "parcel-bundler": "^1.12.5",
     "ts-node": "^9.1.1"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
   }
 }
