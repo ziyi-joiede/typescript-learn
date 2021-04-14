@@ -3,14 +3,14 @@
 import superagent from 'superagent';
 import fs from 'fs';
 import path from 'path';
-import DellAnalyzer from './dellAnalyzer';
+import DellAnalyzer from './analyzer';
 
 export interface Analyzer {
 	analyze:(html:string, filePath:string) => string
 }
 
 class Crawler {
-	private filePath = path.resolve(__dirname, '../data/course.json');
+	private filePath = path.resolve(__dirname, '../../data/course.json');
 	
 	private async getRawHtml(){
 		let res = await superagent.get(this.url);
@@ -39,5 +39,4 @@ const url = `http://www.dell-lee.com/typescript/demo.html?secret=${secret}`
 let analyzer = DellAnalyzer.getInstance(); 
 new Crawler(url, analyzer);
 
-
-
+export default Crawler
