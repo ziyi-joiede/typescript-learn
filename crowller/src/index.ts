@@ -1,4 +1,7 @@
 import express from 'express';
+import './controller/LoginController';
+import './controller/CrawlerController';
+// import router from './router';
 import router from './router';
 import cookieSession from 'cookie-session';
 import bodyParser from 'body-parser';
